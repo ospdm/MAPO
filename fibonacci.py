@@ -7,7 +7,7 @@
 from typing import List
 
 def generate_fibonacci(n: int) -> List[int]:
-    """Возвращает список из первых n чисел Фибоначчи (0, 1, 1, 2, ...)."""
+    # 3f: проверяем корректность ввода n
     if n <= 0:
         return []
     elif n == 1:
