@@ -1,26 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Генерация первых N чисел последовательности Фибоначчи.
+Проверка, является ли строка палиндромом.
 """
 
-from typing import List
-
-def generate_fibonacci(n: int) -> List[int]:
-    """Возвращает список из первых n чисел Фибоначчи (0, 1, 1, 2, ...)."""
-    if n <= 0:
-        return []
-    elif n == 1:
-        return [0]
-    fib = [0, 1]
-    for _ in range(2, n):
-        fib.append(fib[-1] + fib[-2])
-    return fib
+def is_palindrome(s: str) -> bool:
+    """Возвращает True, если s — палиндром (игнорируя регистр и небуквенно-цифровые символы)."""
+    filtered = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return filtered == filtered[::-1]
 
 if __name__ == "__main__":
-    try:
-        n = int(input("Сколько чисел Фибоначчи сгенерировать? "))
-        seq = generate_fibonacci(n)
-        print("Последовательность Фибоначчи:", seq)
-    except ValueError:
-        print("Ошибка: нужно ввести целое число.")
+    s = input("Введите строку: ")
+with open("pal_log.txt", "a", encoding="utf-8") as f:
+        f.write(s + "\n")
+    if is_palindrome(s):
+        print("Это палиндром!")
+    else:
+        print("Это не палиндром.")
+if __name__ == "__main__":
+    if is_palindrome(s):
+        print("Это палиндром!")
+    else:
+        print("Это не палиндром.")
+    # выводим длину строки
+    print(f"Длина строки: {len(s)}")
+    if is_palindrome(s):
+        print("Строка является палиндромом.")
+    else:
+        print("Строка не является палиндромом.")
+
