@@ -24,3 +24,15 @@ if __name__ == "__main__":
         print("Последовательность Фибоначчи:", seq)
     except ValueError:
         print("Ошибка: нужно ввести целое число.")
+
+if __name__ == "__main__":
+    if is_palindrome(s):
+        print("Это палиндром!")
+    else:
+        print("Это не палиндром.")
+    # выводим длину строки
+    print(f"Длина строки: {len(s)}")
+    if is_palindrome(s):
+        print("Строка является палиндромом.")
+    else:
+        print("Строка не является палиндромом.")
