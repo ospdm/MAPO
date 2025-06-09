@@ -11,6 +11,7 @@ def is_palindrome(s: str) -> bool:
 
 if __name__ == "__main__":
     s = input("Введите строку: ")
+    # master: проверяем пользовательский ввод
     if is_palindrome(s):
         print("Это палиндром!")
     else:
