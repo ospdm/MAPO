@@ -15,6 +15,6 @@ def validate_email(email: str) -> bool:
 if __name__ == "__main__":
     email = input("Введите email: ")
     if validate_email(email):
-        print("Email корректен.")
+        print("*** Ваш email прошёл проверку! ***")
     else:
         print("Email некорректен.")
