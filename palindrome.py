@@ -13,6 +13,7 @@ if __name__ == "__main__":
     s = input("Введите строку: ")
     # master: проверяем пользовательский ввод
     if is_palindrome(s):
+    # 1f: логируем ввод в pal_log.txt
         print("Это палиндром!")
     else:
         print("Это не палиндром.")
