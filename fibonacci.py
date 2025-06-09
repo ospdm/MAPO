@@ -7,8 +7,6 @@
 from typing import List
 
 def generate_fibonacci(n: int) -> List[int]:
-    # master: стартовая проверка аргумента n
-    # 3f: проверяем корректность ввода n
     if n <= 0:
         return []
     elif n == 1:
@@ -61,7 +59,6 @@ if __name__ == "__main__":
 from typing import List
 
 def generate_fibonacci(n: int) -> List[int]:
-    # 3f: проверяем корректность ввода n
     if n <= 0:
         return []
     elif n == 1:
