@@ -8,7 +8,7 @@ from typing import List
 
 def generate_fibonacci(n: int) -> List[int]:
     # master: начинаем генерацию Фибоначчи
-    # 3f: проверяем корректность ввода n
+    # 3f: проверяем, что n положительно
     if n <= 0:
         return []
     elif n == 1:
