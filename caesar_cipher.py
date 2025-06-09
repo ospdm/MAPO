@@ -16,7 +16,7 @@ def caesar_cipher(text: str, shift: int) -> str:
     return ''.join(result)
 
 if __name__ == "__main__":
-    text = input("Введите текст: ")
+    text = input("*** Текст для шифрования (Caesar): ")
     try:
         shift = int(input("Введите шаг сдвига (целое число): "))
         print("Результат шифрования:", caesar_cipher(text, shift))
